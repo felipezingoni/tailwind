@@ -6,11 +6,15 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'wind', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/2de2fa6cb0.js" crossorigin="anonymous"></script>
   </head>
 
-  <body>
+  <body class="bg-gray-50">
+    <%= render 'shared/navbar' %>
     <%= yield %>
+
+    <%= render 'shared/footer' %>
   </body>
 </html>
