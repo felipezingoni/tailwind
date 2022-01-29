@@ -1,106 +1,93 @@
-<div class="container bg-banner-image h-screen w-full bg-contain bg-no-repeat bg-right-top bg-gray-50">
-    <h1 class="text-center text-sm relative left-20 top-40 bg-gray-50 w-32 p-3 text-green-700 shadow-sm m-5 ">REAL STATES</h1>
-    <h1 class="text-5xl font-semibold  font-serif m-4 relative left-20 top-40 ">Lets hunt for your <br> dream residence</h1>
-    <p class="text-sm font-thin ml-4 relative left-20 top-40  ">Explore our range of beautiful properties with the addition of <br> separate accommidation suitable for you.</p>
-  <div class="flex ">
-    <button class="text-lg shadow-xl relative left-20 top-40 p-2 pl-5 pr-5 ml-6 mt-6 transition-colors duration-700 transform bg-white hover:bg-gray-200 text-green-700 rounded-sm focus:border-4">Buy</button>
-    <button class="text-lg relative left-20 top-40 p-2 pl-5 pr-5 mx-6 mt-6 bg-trasparent text-gray-500">Rent</button>
-  </div>
-  <div class="bg-white rounded-md w-3/5 h-160 relative left-20 top-40 mx-6 shadow-xl flex items-center">
-    <div>
-      <div class="flex justify-start ">
-        <h1 class="text-gray-800 mr-24 ml-6 mt-6 mb-4">Location</h1>
-        <h1 class="text-gray-800 mr-24 ml-6 mt-6 mb-4">Type</h1>
-        <h1 class="text-gray-800 mr-24 ml-6 mt-6 mb-4 ">Price Range</h1>
-      </div>
-      <div class="flex justify-start">
-                <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                    <button @click="open = !open" class="text-gray-400 flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-normal text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-300 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                      <span>Select Location</span>
-                      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                </div>
-                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                    <button @click="open = !open" class="text-gray-400 flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-normal text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-300 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                      <span>Select Type</span>
-                      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                </div>
-                 <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                    <button @click="open = !open" class="text-gray-400 mb-4 flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-normal text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-300 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                      <span>Select Price Range</span>
-                      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                </div>
-      </div>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)), url(https://i.imgur.com/zVZwT8e.png);">
+    <div class="container">
+    <div class="banner-title">
+      <h6 class="boton-subtittle">REAL STATES</h6>
+      <h1 class="tittle ">Lets hunt for your <br> dream residence</h1>
+      <p class="subtitle">Explore our range of beautiful properties with the addition of <br> separate accommidation suitable for you.</p>
+
+      <div style="display: flex">
+         <ul class="list-inline tabs-underlined">
+            <li>
+              <a href="#" class="tab-underlined active">Buy</a>
+            </li>
+            <li>
+              <a href="#" class="tab-underlined">Rent</a>
+            </li>
+          </ul>
     </div>
 
-    <button class=" p-2 pl-7 pr-7 ml-6 mt-6 transition-colors duration-700 transform bg-green2-100 hover:bg-green-500 text-gray-100 text-sm rounded-sm focus:border-4">Search</button>
-  </div>
+        <%# <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Buy</button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#">Location</a></li>
+              <li><a class="dropdown-item" href="#">Type</a></li>
+              <li><a class="dropdown-item" href="#">Price Range</a></li>
+            </ul>
+        </div> %>
+
+      </div>
+    </div>
 </div>
 
-  <div class="bg-white m-10 ">
-     <h1> <br> </h1>
 
-  <div class="mb-20">
-    <div class="m-5 flex justify-between">
+  <div class="container">
+    <div class="best-recomendation" style="display:flex; justify-content: space-between;align-items: flex-end;">
       <div>
-        <h1 class="text-center text-sm bg-gray-50 w-32 p-3 text-green-700 shadow-sm ml-20 my-8 ">DISCOVER</h1>
-        <h1 class="text-2xl font-normal font-serif mx-20 ">Best recomendation </h1>
-        <p class="text-sm font-thin mx-20 my-5">Discover our exlusive selection of the finest one of a kind <br> of luxury properties architectural masterpieces.</p>
+        <h6 class="boton-subtittle">DISCOVER</h6>
+        <h4 class="title-general">Best recomendation </h4>
+        <p class="subtitle-general">Discover our exlusive selection of the finest one of a kind <br> of luxury properties architectural masterpieces.</p>
       </div>
-      <div class="flex justify-end items-end m-12">
-        <button class="text-green-700 text-xl ">Learn more</button>
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-width="30" height="30"
-viewBox="0 0 172 172"
-style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#2ecc71"><path d="M30.87938,10.25281c-2.795,0 -5.30781,1.70656 -6.35594,4.3c-1.06156,2.59344 -0.43,5.56312 1.57219,7.51156l63.93562,63.93562l-63.93562,63.93563c-1.80063,1.72 -2.52625,4.28656 -1.89469,6.70531c0.63156,2.40531 2.51281,4.28656 4.91813,4.91813c2.41875,0.63156 4.98531,-0.09406 6.70531,-1.89469l73.66437,-73.66438l-73.66437,-73.66437c-1.30344,-1.33031 -3.07719,-2.08281 -4.945,-2.08281zM75.61281,10.25281c-2.80844,0 -5.32125,1.70656 -6.36938,4.3c-1.06156,2.59344 -0.43,5.56312 1.57219,7.51156l63.93562,63.93562l-63.93562,63.93563c-1.80063,1.72 -2.52625,4.28656 -1.89469,6.70531c0.63156,2.40531 2.51281,4.28656 4.91813,4.91813c2.41875,0.63156 4.98531,-0.09406 6.70531,-1.89469l73.66437,-73.66438l-73.66437,-73.66437c-1.30344,-1.33031 -3.07719,-2.08281 -4.93156,-2.08281z"></path></g></g></svg>
+      <div class="boton-learn" style="display: flex; align-items: center;">
+        <%= link_to "Learn more", "#", class: "btn btn-ghost" %>
+        <div class="live"></div>
        </div>
     </div>
 
-    <div class="ml-20 flex">
-      <div class="bg-gray-100 shadow-2xl h-1/2 w-96 rounded m-auto mt-4">
-        <%= image_tag('https://i.imgur.com/6jSAAiD.jpg', size: "350x150", class:"rounded-md m-auto mt-3")  %>
+    <div class="" style="display:flex; margin-top: 20px;">
+      <div class="card1-home">
+        <%= image_tag('https://i.imgur.com/6jSAAiD.jpg',id:"img")  %>
 
-        <div class="m-4">
-          <h1 class="text-2xl text-zinc-800 mx-4 my-3 font-semibold">Perum griya asri</h1>
-          <h1 class="font-extralight text-zinc-400 mx-4 my-3 ">Bogor, Jawa Barat</h1>
-          <div class="flex justify-between">
-            <h1 class="text-xl text-green-800 mx-4 font-semibold ">$45,00</h1>
-            <h2 class="border-solid text-zinc-500 text-sm items-center flex "><strong>360m</strong> Living Area</h2>
+        <div class="card-content">
+          <h3 class="card-title">Perum griya asri</h3>
+          <h5 class="card-subtitle">Bogor, Jawa Barat</h5>
+          <div class="" style="display:flex; justify-content:space-between; align-items: flex-end">
+            <h5 class="price">$45,00</h5>
+            <h6 class="length"><strong>360m</strong> Living Area</h6>
           </div>
-          <div class="flex ">
-            <button class="p-2 px-16 mt-6 m-auto transition-colors duration-700 transform bg-green2-100 hover:bg-green-500 text-gray-100 text-sm rounded-sm ">Send Inquiry</button>
+          <div class="" style="display:flex; justify-content:center;margin-top:15px">
+            <a class="ghost" href="#">Send Inquiry</a>
           </div>
         </div>
       </div>
 
-      <div class="bg-gray-100 shadow-2xl h-1/2 w-96 rounded m-auto mt-4">
-        <%= image_tag('https://i.imgur.com/8h4qgTR.jpg', size: "350x150", class:"rounded-md m-auto mt-3")  %>
-        <div class="m-4">
-          <h1 class="text-2xl text-zinc-800 mx-4 my-3 font-semibold">Perum griya asri</h1>
-          <h1 class="font-extralight text-zinc-400 mx-4 my-3 ">Bogor, Jawa Barat</h1>
-          <div class="flex justify-between">
-            <h1 class="text-xl text-green-800 mx-4 font-semibold ">$45,00</h1>
-            <h2 class="border-solid text-zinc-500 text-sm items-center flex "><strong>360m</strong> Living Area</h2>
+      <div class="card1-home">
+        <%= image_tag('https://i.imgur.com/8h4qgTR.jpg', id:"img")  %>
+
+        <div class="card-content">
+          <h1 class="card-title">Perum griya asri</h1>
+          <h5 class="card-subtitle">Bogor, Jawa Barat</h5>
+          <div style="display:flex; justify-content:space-between; align-items: flex-end">
+            <h5 class="price">$45,00</h5>
+            <h6 class="length"><strong>360m</strong> Living Area</h6>
           </div>
-          <div class="flex ">
-            <button class="p-2 px-16 mt-6 m-auto transition-colors duration-700 transform bg-green2-100 hover:bg-green-500 text-gray-100 text-sm rounded-sm ">Send Inquiry</button>
+          <div class="" style="display:flex; justify-content:center;margin-top:15px">
+            <a class="ghost" href="#">Send Inquiry</a>
           </div>
         </div>
       </div>
 
-      <div class="bg-gray-100 shadow-2xl h-1/2 w-96 rounded m-auto mt-4">
-        <%= image_tag('https://i.imgur.com/7TK7crM.jpg', size: "350x150", class:"rounded-md m-auto mt-3")  %>
-        <div class="m-4">
-          <h1 class="text-2xl text-zinc-800 mx-4 my-3 font-semibold">Perum griya asri</h1>
-          <h1 class="font-extralight text-zinc-400 mx-4 my-3 ">Bogor, Jawa Barat</h1>
-          <div class="flex justify-between">
-            <h1 class="text-xl text-green-800 mx-4 font-semibold ">$45,00</h1>
-            <h2 class="border-solid text-zinc-500 text-sm items-center flex "><strong>360m</strong> Living Area</h2>
+      <div class="card1-home">
+        <%= image_tag('https://i.imgur.com/7TK7crM.jpg', id:"img")  %>
+        <div class="card-content">
+          <h1 class="card-title">Perum griya asri</h1>
+          <h5 class="card-subtitle">Bogor, Jawa Barat</h5>
+          <div style="display:flex; justify-content:space-between; align-items: flex-end">
+            <h5 class="price">$45,00</h5>
+            <h6 class="length"><strong>360m</strong> Living Area</h6>
           </div>
-          <div class="flex ">
-            <button class="p-2 px-16 mt-6 m-auto transition-colors duration-700 transform bg-green2-100 hover:bg-green-500 text-gray-100 text-sm rounded-sm ">Send Inquiry</button>
+          <div class="" style="display:flex; justify-content:center;margin-top:15px">
+            <a class="ghost" href="#">Send Inquiry</a>
           </div>
         </div>
       </div>
@@ -112,113 +99,115 @@ style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-w
   </div>
 
 
-    <div class="m-auto container bg-gray-100">
-      <h1> <br> </h1>
-      <div class="m-5">
-        <h1 class="text-center text-sm bg-gray-50 w-32 p-3 text-green-700 shadow-sm ml-20 m-auto  ">OUR ADVANTE</h1>
-        <h1 class="text-2xl font-normal font-serif mx-20 mt-6 ">Giving you peace of mind </h1>
-      </div>
-
-      <div class="grid grid-cols-3 m-10">
-        <div class="m-10">
-          <div class="m-5">
-            <span class="text-green2-100 text-6xl"><i class="fas fa-heart"></i></span>
-          </div>
-            <h1 class="text-lg font-medium font-serif text-left">Confortable</h1>
-            <p class="text-sm font-light text-gray-500 text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam recusandae <br> rerum iure quis.</p>
-        </div>
-        <div class="m-10">
-          <div class="m-5">
-            <span class="text-green2-100 text-6xl"><i class="fas fa-shield-alt"></i></span>
-          </div>
-          <h1 class="text-lg font-medium font-serif text-left">Extra Security</h1>
-          <p class="text-sm font-light text-gray-500 text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam recusandae <br> rerum iure quis.</p>
-        </div>
-        <div class="m-10">
-          <div class="m-5">
-            <span class="text-green2-100 text-6xl"><i class="fas fa-star"></i></i></span>
-          </div>
-          <h1 class="text-lg font-medium font-serif text-left ">Luxury</h1>
-          <p class="text-sm font-light text-gray-500 text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam recusandae <br> rerum iure quis.</p>
-        </div>
-        <div class="m-10">
-          <div class="m-5">
-            <span class="text-green2-100 text-6xl"><i class="fas fa-hand-holding-usd"></i></span>
-          </div>
-          <h1 class="text-lg font-medium font-serif text-left">Best price</h1>
-          <p class="text-sm font-light text-gray-500 text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam recusandae <br> rerum iure quis.</p>
-        </div>
-        <div class="m-10">
-          <div class="m-5">
-            <span class="text-green2-100 text-6xl"><i class="fas fa-map-marker-alt"></i></span>
-          </div>
-          <h1 class="text-lg font-medium font-serif text-left">Strategic Location</h1>
-          <p class="text-sm font-light text-gray-500 text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam recusandae <br> rerum iure quis.</p>
-        </div>
-        <div class="m-10">
-          <div class="m-5">
-            <span class="text-green2-100 text-6xl"><i class="fas fa-bolt"></i></i></span>
-          </div>
-          <h1 class="text-lg font-medium font-serif text-left">Efficient</h1>
-          <p class="text-sm font-light text-gray-500 text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam recusandae <br> rerum iure quis.</p>
+    <div class="our-advante container">
+     <div style="margin:20px">
+        <div class="container" style="margin:40px">
+          <h6 class="boton-subtittle">OUR ADVANTE</h6>
+          <h1 class="title-general">Giving you peace <br> of mind </h1>
         </div>
 
+       <div class="icons" style="display:grid; margin:40px; grid-template-columns: 1fr 1fr 1fr">
+          <div class="pl-10 m-auto">
+            <div class="ml-15 mr-15">
+              <span class="icon"><i class="fas fa-heart"></i></span>
+            </div>
+              <h4 class="">Confortable</h4>
+              <p class="">Lorem ipsum dolor sit amet consectetur <br>adipisicing elit.  Magnam recusandae<br> rerum iure quis.</p>
+          </div>
+          <div class="pl-10 m-auto">
+            <div class="ml-15 mr-15">
+              <span class="icon"><i class="fas fa-shield-alt"></i></span>
+            </div>
+            <h4 class="">Extra Security</h4>
+            <p class="">Lorem ipsum dolor sit amet consectetur <br>adipisicing elit.  Magnam recusandae<br> rerum iure quis.</p>
+          </div>
+          <div class="pl-10 m-auto">
+            <div class="ml-15 mr-15">
+              <span class="icon"><i class="fas fa-star"></i></i></span>
+            </div>
+            <h4 class=" ">Luxury</h4>
+            <p class="">Lorem ipsum dolor sit amet consectetur <br>adipisicing elit.  Magnam recusandae<br> rerum iure quis.</p>
+          </div>
+          <div class="pl-10 m-auto">
+            <div class="ml-15 mr-15">
+              <span class="icon"><i class="fas fa-hand-holding-usd"></i></span>
+            </div>
+            <h4 class="">Best price</h4>
+            <p >Lorem ipsum dolor sit amet consectetur <br>adipisicing elit.  Magnam recusandae<br> rerum iure quis.</p>
+          </div>
+          <div class="pl-10 m-auto">
+            <div class="ml-15 mr-15">
+              <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+            </div>
+            <h4 class="">Strategic Location</h4>
+            <p >Lorem ipsum dolor sit amet consectetur <br>adipisicing elit.  Magnam recusandae<br> rerum iure quis.</p>
+          </div>
+          <div class="pl-10 m-auto">
+            <div class="ml-15 mr-15">
+              <span class="icon"><i class="fas fa-bolt"></i></i></span>
+            </div>
+            <h4 class="">Efficient</h4>
+            <p >Lorem ipsum dolor sit amet consectetur <br>adipisicing elit.  Magnam recusandae<br> rerum iure quis.</p>
+          </div>
+       </div>
       </div>
     </div>
 
-    <div class="m-auto container bg-gray-50 flex">
+    <div class="container" style="display:flex;">
 
         <%= image_tag('https://i.imgur.com/spA4H2t.png', size: "600x450") %>
 
-      <div class=" m-10">
-        <h1 class="text-center text-sm bg-gray-50 w-32 p-3 text-green-700 shadow-sm ml-20 m-auto  ">ABOUT US</h1>
-        <h1 class="text-3xl font-semibold font-serif mx-20 mt-6 ">How much is your <br> property worth now?</h1>
-        <p class="mx-20 mt-6">We have built our reputation as true local area experts. We have gained more knowledge about buyer interests,
+      <div class=" m-auto " style="padding-left: 35px;">
+        <h6 class="boton-subtittle">ABOUT US</h6>
+        <h1 class="title-general">How much is your <br> property worth now?</h1>
+        <p class="subtitle-general">We have built our reputation as true local area experts. We have gained more knowledge about buyer interests,
          our neighborhood and the market than anu other brand because we live locally and work for local people.</p>
-         <button class=" p-2 pl-7 pr-7 mx-20 mt-6 transition-colors duration-700 transform bg-green2-100 hover:bg-green-500 text-gray-100 text-sm rounded-sm focus:border-4">Learn More</button>
+          <div class="boton-learn" style="display: flex; align-items: center; width:180px">
+            <%= link_to "Learn more", "#", class: "btn btn-ghost" %>
+            <div class="live"></div>
+          </div>
       </div>
     </div>
 
-    <div class="m-16">
-      <h1 class="text-center text-sm bg-gray-50 w-32 p-3 text-green-700 shadow-sm ml-20 m-auto  ">CUSTOMERS TESTIMONIAL</h1>
-      <h1 class="text-3xl font-semibold font-serif mx-20 mt-6 ">People say about us?</h1>
-        <div class="flex">
-          <div class="bg-gray-100 shadow-2xl h-1/2 w-96 rounded m-auto mt-4">
-            <%= image_tag('https://i.imgur.com/DJD8z8Y.jpg?1', size: "50x40", class:"rounded-full m-4 opacity-10") %>
-            <h2 class="text-xl m-5">It proved to be exactly the kind of home we wanted.</h2>
-            <p class="text-sm m-5 font-light text-gray-700 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ducimus architecto amet aut aperiam accusantium! Dolore minus consequuntur sed dignissimos, enim laboriosam suscipit!</p>
-            <div class="flex">
-              <%= image_tag('https://i.imgur.com/DacMBRq.jpg?1', size: "50x40", class:"rounded-full m-4") %>
-              <div>
-                <h1 class="mt-4">Jadmon Ferrid</h1>
-                <p class="text-md font-extralight text-gray-400 ">Building Architect</p>
+    <div class="container" style="margin-top:50px">
+      <h6 class="boton-subtittle">CUSTOMERS TESTIMONIAL</h6>
+      <h1 class="title-general">People say about us?</h1>
+        <div class="" style="display:flex">
+          <div class="card-comment">
+            <%= image_tag('https://img2.freepng.es/20180523/irc/kisspng-e-commerce-brightwheel-service-business-informatio-quotation-marks-5b05018d6407e2.8913143815270547334097.jpg', size: "60x50", class:"comillas") %>
+            <h3 class="m-3">It proved to be exactly the kind of home we wanted.</h3>
+            <p class="m-3" style="font-weight: 100;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ducimus architecto amet aut aperiam accusantium! Dolore minus consequuntur sed dignissimos, enim laboriosam suscipit!</p>
+              <div style="display:flex; ">
+                <%= image_tag('https://i.imgur.com/DacMBRq.jpg?1', size: "60x60", class:"comillas") %>
+                <div class="m-2 pl-2" style="display: flex; flex-direction: column;justify-content: flex-end;">
+                  <h5 class="">Jadmon Ferrid</h5>
+                  <p style="font-weight: 100;">Building Architect</p>
+                </div>
+              </div>
+          </div>
+          <div class="card-comment">
+            <%= image_tag('https://img2.freepng.es/20180523/irc/kisspng-e-commerce-brightwheel-service-business-informatio-quotation-marks-5b05018d6407e2.8913143815270547334097.jpg', size: "60x50", class:"comillas") %>
+            <h3 class="m-3">It proved to be exactly the kind of home we wanted.</h3>
+            <p class="m-3" style="font-weight: 100;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ducimus architecto amet aut aperiam accusantium! Dolore minus consequuntur sed dignissimos, enim laboriosam suscipit!</p>
+            <div style="display:flex;">
+              <%= image_tag('https://i.imgur.com/3qI0l6g.jpg', size: "60x60", class:"comillas") %>
+                <div class="m-2 pl-2" style="display: flex; flex-direction: column;justify-content: flex-end;">
+                <h5 class="">Jadmon Ferrid</h5>
+                <p style="font-weight: 100;">Building Architect</p>
               </div>
 
             </div>
           </div>
-          <div class="bg-gray-100 shadow-2xl h-1/2 w-96 rounded m-auto mt-4">
-            <%= image_tag('https://i.imgur.com/DJD8z8Y.jpg?1', size: "50x40", class:"rounded-full m-4 opacity-10") %>
-            <h2 class="text-xl m-5">It proved to be exactly the kind of home we wanted.</h2>
-            <p class="text-sm m-5 font-light text-gray-700 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ducimus architecto amet aut aperiam accusantium! Dolore minus consequuntur sed dignissimos, enim laboriosam suscipit!</p>
-            <div class="flex">
-              <%= image_tag('https://i.imgur.com/3qI0l6g.jpg', size: "40x40", class:"rounded-full m-4") %>
-              <div>
-                <h1 class="mt-4">Jadmon Ferrid</h1>
-                <p class="text-md font-extralight text-gray-400 ">Building Architect</p>
-              </div>
 
-            </div>
-          </div>
-
-          <div class="bg-gray-100 shadow-2xl h-1/2 w-96 rounded m-auto mt-4">
-            <%= image_tag('https://i.imgur.com/DJD8z8Y.jpg?1', size: "50x40", class:"rounded-full m-4 opacity-10") %>
-            <h2 class="text-xl m-5">It proved to be exactly the kind of home we wanted.</h2>
-            <p class="text-sm m-5 font-light text-gray-700 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ducimus architecto amet aut aperiam accusantium! Dolore minus consequuntur sed dignissimos, enim laboriosam suscipit!</p>
-            <div class="flex">
-              <%= image_tag('https://i.imgur.com/9vbLP9d.jpg', size: "40x40", class:"rounded-full m-4") %>
-              <div>
-                <h1 class="mt-4">Jadmon Ferrid</h1>
-                <p class="text-md font-extralight text-gray-400 ">Building Architect</p>
+          <div class="card-comment">
+            <%= image_tag('https://img2.freepng.es/20180523/irc/kisspng-e-commerce-brightwheel-service-business-informatio-quotation-marks-5b05018d6407e2.8913143815270547334097.jpg', size: "60x50", class:"comillas") %>
+            <h3 class="m-3">It proved to be exactly the kind of home we wanted.</h3>
+            <p class="m-3" style="font-weight: 100;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni ducimus architecto amet aut aperiam accusantium! Dolore minus consequuntur sed dignissimos, enim laboriosam suscipit!</p>
+            <div style="display:flex;">
+              <%= image_tag('https://i.imgur.com/9vbLP9d.jpg', size: "60x60", class:"comillas") %>
+                <div class="m-2 pl-2" style="display: flex; flex-direction: column;justify-content: flex-end;">
+                <h5 class="">Jadmon Ferrid</h5>
+                <p style="font-weight: 100;">Building Architect</p>
               </div>
 
             </div>
