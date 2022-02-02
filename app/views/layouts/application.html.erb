@@ -20,7 +20,9 @@
 
     <%= render 'shared/footer' %>
 
-    <script type="text/javascript" src="js/App.js"></script>
+    <%# <%= javascript_include_tag 'application' %>
+    <%= javascript_pack_tag 'application' %>
+    <% <script type="text/javascript" src="js/App.js"></script>
     <script src="https://kit.fontawesome.com/2de2fa6cb0.js" crossorigin="anonymous"></script>
   </body>
 </html>

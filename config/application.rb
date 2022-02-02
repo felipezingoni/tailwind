@@ -33,3 +33,5 @@ module Tailwindcss
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end
+
+config.assets.paths << "#{index}/app/assets/videos"
